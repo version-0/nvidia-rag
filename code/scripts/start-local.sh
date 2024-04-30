@@ -15,7 +15,7 @@ else
     text-generation-launcher --model-id $1 --cuda-memory-fraction $CUDA_MEMORY_FRACTION --max-input-length 4000 --max-total-tokens 5000 --quantize $2 --port 9090 &
 fi
 
-sleep 30 # Model warm-up
+sleep 40 # Model warm-up
 
 URLS=("http://localhost:9090/info")
 
